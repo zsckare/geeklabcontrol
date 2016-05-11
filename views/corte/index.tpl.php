@@ -12,7 +12,7 @@
 	</div>
 </div>
 
-<div style="height: 500px;overflow: auto;" >
+<div style="height: 500px;overflow: auto;" id="print" >
 	<table class="table striped hovered">
 		<thead>
 			<tr>
@@ -55,4 +55,16 @@
 		</tbody>
 	</table>
 </div>
+<a href="javascript:imprSelec('print')" target="_parent">Imprimir</a>
 </section>
+<script language="Javascript">
+function imprSelec(nombre)
+{
+var articulo = document.getElementById(nombre);
+var ventimp = window.open(' ','Nota','no','no','50','no','no','no','no','no','no','no','no','50');
+ventimp.document.write(articulo.innerHTML );
+ventimp.document.close();
+ventimp.print( );
+ventimp.close();
+}
+</script>
